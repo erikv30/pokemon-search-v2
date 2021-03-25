@@ -1,4 +1,9 @@
-React app using PokeAPI and axios
+React app using PokeAPI and
+axios
+lodash
+react-redux
+redux
+redux-thunk redux-devtools-extension
 
 and for hosting gh pages
 

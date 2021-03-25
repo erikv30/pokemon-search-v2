@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,9 +10,53 @@
 html,
 body {
   height: 100vh;
-  background-color: #24292e;
-  color: #fff;
-  font-family: Helvetica, sans-serif;
+  background: #67b26f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #4ca2cd,
+    #67b26f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #4ca2cd,
+    #67b26f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  background: #ffffff;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+/*--title-color: #1c1c22;*/
+/*--text-color: #58576b;*/
+nav a {
+  margin-right: 50px;
+  color: #1c1c22;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+}
+.glass {
+  background: #ffffff;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 20px;
 }
