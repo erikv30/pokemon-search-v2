@@ -27,6 +27,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
 nav {
   display: flex;
   width: 100%;
@@ -40,8 +49,7 @@ nav {
     rgba(255, 255, 255, 0.3)
   );
 }
-/*--title-color: #1c1c22;*/
-/*--text-color: #58576b;*/
+
 nav a {
   margin-right: 50px;
   color: #1c1c22;
@@ -51,6 +59,34 @@ nav a {
 h1 {
   font-family: "Permanent Marker", cursive;
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem auto 2rem auto;
+  padding: 0 50px;
+}
+
+.card {
+  text-align: center;
+  padding: 15px 5px;
+  background: linear-gradient(
+    130deg,
+    rgba(251, 251, 254, 0.6),
+    rgba(251, 251, 254, 0.2)
+  );
+  box-shadow: inset 2px 2px 1px rgba(251, 251, 254, 0.3),
+    inset -2px -2px 1px rgba(251, 251, 254, 0.2);
+  border-radius: 5px;
+}
+
+/*--title-color: #1c1c22;*/
+/*--text-color: #58576b;*/
+.card a {
+  color: #1c1c22;
+}
+
 .glass {
   background: #ffffff;
   background: linear-gradient(
@@ -59,4 +95,24 @@ h1 {
     rgba(255, 255, 255, 0.3)
   );
   border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 660px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cards {
+    grid-template-columns: 1fr;
+    padding: 0 40px;
+  }
 }

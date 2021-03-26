@@ -5,7 +5,7 @@ import Pokemon from './Pages/Pokemon';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <nav>
         <NavLink to={'/'}><i className="fas fa-search"></i> Search</NavLink>
       </nav>
