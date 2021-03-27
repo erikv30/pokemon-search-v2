@@ -87,7 +87,18 @@ h1 {
   color: #1c1c22;
 }
 
+.info {
+  margin: 2rem auto 2rem auto;
+  padding: 0 50px;
+  text-align: center;
+  align-items: center;
+}
+
 .glass {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background: #ffffff;
   background: linear-gradient(
     to right bottom,
@@ -95,6 +106,28 @@ h1 {
     rgba(255, 255, 255, 0.3)
   );
   border-radius: 20px;
+}
+
+.pictures {
+  display: inline-flexbox;
+  width: 300px;
+}
+
+.name {
+  font-size: 30px;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row > img {
+  width: 150px;
+  height: auto;
 }
 
 @media (max-width: 800px) {
