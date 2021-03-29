@@ -20,7 +20,11 @@ const PokemonList = (props) => {
 
     const ShowData = () => {
         if(pokemonList.loading) {
-            return <p>Loading...</p>
+            return(
+                <div className='message'>
+                    <p>Loading...</p>
+                </div>
+            ) 
         }
         
         if(!_.isEmpty(pokemonList.data)) {
@@ -40,10 +44,18 @@ const PokemonList = (props) => {
         }
 
         if(pokemonList.errorMsg !== "") {
-            return <p>{pokemonList.errorMsg}</p>
+            return(
+                <div className='message'>
+                    <p>{pokemonList.errorMsg}</p>
+                </div>
+            ) 
         }
 
-        return <p>unable to get data</p>
+        return(
+            <div className='message'>
+                <p>unable to get data</p>
+            </div>
+        ) 
     }
 
     return (

@@ -32,14 +32,26 @@ const Pokemon = (props) => {
         }
 
         if(pokemonState.loading) {
-            return <p>Loading...</p>
+            return(
+                <div className='message'>
+                    <p>Loading...</p>
+                </div>
+            ) 
         }
 
         if(pokemonState.errorMsg !== "") {
-            return <p>{pokemonState.errorMsg}</p>
+            return(
+                <div className='message'>
+                    <p>{pokemonState.errorMsg}</p>
+                </div>
+            ) 
         }
 
-        return <p>error getting pokemon</p>
+        return(
+            <div className='message'>
+                <p>error getting pokemon</p>
+            </div>
+        ) 
     }
 
     return (
