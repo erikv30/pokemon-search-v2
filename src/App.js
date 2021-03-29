@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="container">
       <nav>
-        <NavLink to={'/'}><i className="fas fa-search"></i> Search</NavLink>
+        <NavLink to={'/'}>PokéDex</NavLink>
       </nav>
      <Switch>
        <Route path={'/'} exact component={PokemonList} />

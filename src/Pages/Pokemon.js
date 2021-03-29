@@ -13,17 +13,18 @@ const Pokemon = (props) => {
 
     const ShowData = () => {
         if(!_.isEmpty(pokemonState.data[pokemonName])) {
+            const pokeData = pokemonState.data[pokemonName]
             return(
                 <section className='glass'>
-                    <h2 className='name'>pokemon name</h2>
+                    <h2 className='name'>{pokeData.name}</h2>
                     <div className='pictures'>
                         <div className='row'>
-                            <img src='' alt="imgFront"/>
-                            <img src='' alt="imgShinyF"/>                   
+                            <img src={pokeData.sprites.front_default} alt="imgFront"/>
+                            <img src={pokeData.sprites.back_default} alt="imgShinyF"/>                   
                         </div>
                         <div className='row'>
-                            <img src='' alt="imgBack"/>
-                            <img src='' alt="imgShinyB"/>
+                            <img src={pokeData.sprites.front_shiny} alt="imgBack"/>
+                            <img src={pokeData.sprites.back_shiny} alt="imgShinyB"/>
                         </div>
                     </div>
                 </section>

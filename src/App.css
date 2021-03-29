@@ -41,7 +41,7 @@ nav {
   width: 100%;
   height: 60px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   background: #ffffff;
   background: linear-gradient(
     to right bottom,
@@ -51,9 +51,10 @@ nav {
 }
 
 nav a {
-  margin-right: 50px;
-  color: #1c1c22;
+  color: #58576b;
   text-decoration: none;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.5rem;
 }
 
 h1 {
@@ -85,6 +86,91 @@ h1 {
 /*--text-color: #58576b;*/
 .card a {
   color: #1c1c22;
+}
+
+.search-wrap {
+  display: flex;
+  width: 100%;
+  min-height: 60px;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+input[type="text"] {
+  display: inline-flexbox;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  width: 270px;
+  outline: none;
+}
+
+.search-wrap button {
+  display: inline-flex;
+  background: #ffffff;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  padding: 0.75rem 1.3rem;
+  border-radius: 5px;
+  border: 0;
+  font-size: 16px;
+  color: #58576b;
+  font-weight: 700;
+  margin-left: 10px;
+  transition: 0.4s;
+}
+
+.search-wrap button:hover {
+  background: linear-gradient(
+    130deg,
+    rgba(251, 251, 254, 1),
+    rgba(251, 251, 254, 0.4)
+  );
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 270px;
+  margin: auto;
+  list-style: none;
+  padding: 20px 0;
+  color: #58576b;
+  font-weight: 700;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+}
+
+.pages {
+  padding: 3px 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pages:hover {
+  border: 2px solid #ffffffa6;
+}
+
+.prev:hover,
+.next:hover {
+  color: #ffffffa6;
+}
+
+.active-page {
+  color: #ffffffa6;
+  border-radius: 50%;
+  font-weight: 700;
+  border: 2px solid #ffffffa6;
 }
 
 .info {
@@ -143,9 +229,18 @@ h1 {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .cards {
     grid-template-columns: 1fr;
     padding: 0 40px;
+  }
+
+  .search-wrap {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+
+  .search-wrap button {
+    margin: 10px 0 0 0;
   }
 }
