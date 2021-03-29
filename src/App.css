@@ -157,10 +157,7 @@ input[type="text"] {
   cursor: pointer;
 }
 
-.pages:hover {
-  border: 2px solid #ffffffa6;
-}
-
+.pages:hover,
 .prev:hover,
 .next:hover {
   color: #ffffffa6;
@@ -183,8 +180,10 @@ input[type="text"] {
 }
 
 .info {
-  margin: 2rem auto 2rem auto;
-  padding: 0 50px;
+  margin: 5rem auto 5rem auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 40px;
   text-align: center;
   align-items: center;
 }
@@ -206,13 +205,47 @@ input[type="text"] {
 .pictures {
   display: inline-flexbox;
   width: 300px;
+  margin-bottom: 20px;
+  margin-right: 100px;
+}
+
+.header-poke {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .name {
   font-size: 30px;
   font-family: "Permanent Marker", cursive;
-  margin-bottom: 40px;
+  display: inline-flexbox;
+}
+
+.number {
+  font-size: 25px;
+  font-weight: 700;
+  color: #58576b;
+  margin-left: 10px;
+}
+
+.type {
+  display: flex;
   width: 100%;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.type span {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 0;
 }
 
 .row {
@@ -225,9 +258,55 @@ input[type="text"] {
   height: auto;
 }
 
+.description {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.item {
+  width: 148px;
+  height: 300px;
+}
+
+#left {
+  border-right: 2px solid #58576b;
+}
+
+.col-1 p {
+  font-size: 16px;
+  font-family: "Permanent Marker", cursive;
+  text-align: left;
+}
+
+.col-1 span {
+  color: #58576b;
+  font-weight: 700;
+}
+.col-2 p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #58576b;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 800px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header-poke {
+    flex-direction: column;
+  }
+
+  .pictures {
+    margin-right: 50px;
+    margin-left: 50px;
   }
 }
 
@@ -235,6 +314,16 @@ input[type="text"] {
   .cards {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 20px;
+  }
+
+  .info {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .pictures {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -244,6 +333,11 @@ input[type="text"] {
     padding: 0 40px;
   }
 
+  .info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .search-wrap {
     flex-direction: column;
     margin: 40px 0;
@@ -251,5 +345,9 @@ input[type="text"] {
 
   .search-wrap button {
     margin: 10px 0 0 0;
+  }
+
+  .col-1 p {
+    margin-left: 5px;
   }
 }
