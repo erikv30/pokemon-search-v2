@@ -18,6 +18,12 @@ const PokemonList = (props) => {
         dispatch(GetPokemonList(page))
     }
 
+     const handleKeyPress = (event) => {
+        if(event.key === 'Enter'){
+            props.history.push(`/pokemon/${search}`)
+        }
+      }
+
     const ShowData = () => {
         if(pokemonList.loading) {
             return(
@@ -61,7 +67,7 @@ const PokemonList = (props) => {
     return (
         <div>
             <div className='search-wrap'>
-                <input type="text" onChange={e => setSearch(e.target.value)} placeholder='Example: cyndaquil or 155' />
+                <input type="text" onChange={e => setSearch(e.target.value)} onKeyPress={e => handleKeyPress(e)} placeholder='Example: cyndaquil or 155' />
                 <button onClick={() => props.history.push(`/pokemon/${search}`)}>Search</button>
             </div>
             {ShowData()}
